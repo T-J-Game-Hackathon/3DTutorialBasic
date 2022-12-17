@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+  GameController gameController;
+
   // Start is called before the first frame update
-  void Start() { }
+  void Start()
+  {
+    gameController = GameObject
+      .Find("GameController")
+      .GetComponent<GameController>();
+  }
 
   // Update is called once per frame
   void Update() { }
@@ -22,6 +29,7 @@ public class Item : MonoBehaviour
     {
       Debug.Log("Item collected!");
       Destroy(gameObject);
+      gameController.UpdateScore();
     }
   }
 }
