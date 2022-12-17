@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
   public float moveSpeed = 2.0f;
+  public float jumpForce = 5.0f;
+  private bool shouldJump = false;
 
   // Start is called before the first frame update
   void Start() { }
@@ -25,5 +27,18 @@ public class PlayerController : MonoBehaviour
     // Add a force to the rigidbody's movement vector.
     GetComponent<Rigidbody>()
       .AddForce(movement);
+
+    // If the player presses the spacebar and is grounded...
+    shouldJump = Input.GetButton("Jump");
+    if (shouldJump)
+      Jump();
+  }
+
+  void Jump()
+  {
+    // Add a impulse force to the rigidbody's movement vector.
+    GetComponent<Rigidbody>()
+      .AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    shouldJump = false;
   }
 }
