@@ -974,10 +974,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 543403407908035528, guid: e6e55fac38216cd449d124d44452ab09, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 543403407908035528, guid: e6e55fac38216cd449d124d44452ab09, type: 3}
+      propertyPath: m_Center.y
+      value: -0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 543403407908035530, guid: e6e55fac38216cd449d124d44452ab09, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1102093775}
+    - target: {fileID: 543403407908035530, guid: e6e55fac38216cd449d124d44452ab09, type: 3}
+      propertyPath: respawnPosition.y
+      value: 3.93
+      objectReference: {fileID: 0}
     - target: {fileID: 543403407908035531, guid: e6e55fac38216cd449d124d44452ab09, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -3,6 +3,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
   public GameObject player;
+  public Vector3 respawnPosition = new(-2, 3, -2);
 
   public void Update()
   {
@@ -15,7 +16,11 @@ public class Item : MonoBehaviour
   {
     if (collidedObject.CompareTag("Player"))
     {
-      Destroy(gameObject);
+      gameObject.SetActive(false);
+
+      gameObject.transform.position = respawnPosition;
+
+      gameObject.SetActive(true);
     }
   }
 }
