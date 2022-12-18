@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 
   public void Update()
   {
-    var count = GameObject.FindGameObjectsWithTag("Item").Length;
-    scoreLabel.text = count.ToString();
+    var item = GameObject.Find("Item");
+    scoreLabel.text = item.GetComponent<Item>().collidCount.ToString();
   }
 }

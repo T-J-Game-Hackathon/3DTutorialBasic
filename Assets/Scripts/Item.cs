@@ -4,6 +4,9 @@ public class Item : MonoBehaviour
 {
   public GameObject player;
   public Vector3 respawnPosition = new(-2, 3, -2);
+  
+  // 衝突回数
+  public int collidCount = 0;
 
   public void Update()
   {
@@ -21,6 +24,7 @@ public class Item : MonoBehaviour
       gameObject.transform.position = respawnPosition;
 
       gameObject.SetActive(true);
+      collidCount++;
     }
   }
 }
